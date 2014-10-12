@@ -1,0 +1,242 @@
+//
+//  RMDRootViewController
+//  Reminder
+//
+//  Created by 张鹏 on 14-7-24.
+//  Copyright (c) 2014年 北京携康云享科技有限公司. All rights reserved.
+//
+
+#import "RMDRootViewController.h"
+#import <objc/runtime.h>
+#import "RMDTranspBarNavigationController.h"
+#import "appConfigs.h"
+
+#define backPointX -110
+#define backPointY 110
+
+const char *RMDRootViewControllerKey = "RMDRootViewControllerKey";
+
+
+@implementation UIViewController (RMDRootViewControllerCatagory)
+
+- (RMDRootViewController *)rootVC {
+    RMDRootViewController *rootViewController = objc_getAssociatedObject(self, &RMDRootViewControllerKey);
+    if (!rootViewController) {
+        rootViewController = self.parentViewController.rootVC;
+    }
+    
+    return rootViewController;
+}
+
+
+- (void)setRootVC:(RMDRootViewController *)rootViewController {
+    objc_setAssociatedObject(self, &RMDRootViewControllerKey, rootViewController, OBJC_ASSOCIATION_ASSIGN);
+}
+
+
+@end
+
+@interface RMDRootViewController ()
+
+@property(nonatomic)BOOL isBackShown;
+@property(nonatomic)UIViewController *backVC;
+@property(nonatomic)UIViewController *mainVC;
+@property(nonatomic)RMDTranspBarNavigationController *NavigationVC;
+@property(nonatomic)UIView *topView;
+
+
+@end
+
+@implementation RMDRootViewController
+
+-(instancetype)initWithMainViewController:(UIViewController *)mainVC BackViewController:(UIViewController *)backVC
+{
+    self =  [super init];
+    if (self) {
+        
+        self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        
+        self.backVC = backVC;
+        self.mainVC = mainVC;
+        
+        self.backVC.rootVC = self;
+        self.mainVC.rootVC = self;
+        
+        CGRect rect = self.backVC.view.frame;
+        rect.origin.x = backPointX;
+        rect.origin.y = backPointY;
+        self.backVC.view.frame = rect;
+        self.backVC.view.alpha = 0;
+        
+        [self.view addSubview:self.backVC.view];
+        
+        self.NavigationVC = [[RMDTranspBarNavigationController alloc]initWithRootViewController:mainVC];
+        
+        [self.view addSubview:self.NavigationVC.view];
+        
+        self.topView = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(switchView)];
+        
+        [self.topView addGestureRecognizer:singleTap];
+        
+        self.isBackShown = NO;
+        
+        
+        
+        //添加边界滑动支持
+        UIScreenEdgePanGestureRecognizer *screenEPGR = [[UIScreenEdgePanGestureRecognizer alloc]initWithTarget:self action:@selector(slipView:)];
+        
+        screenEPGR.edges = UIRectEdgeLeft;
+        
+        [self.mainVC.view addGestureRecognizer:screenEPGR];
+        
+        
+    }
+    return self;
+
+}
+
+
+-(void)slipView:(UIScreenEdgePanGestureRecognizer *)screenEPGR
+{
+    CGPoint thisPoint = [screenEPGR locationInView:self.view.window];
+    if (screenEPGR.state == UIGestureRecognizerStateChanged) {
+        
+        if (thisPoint.x > SCREEN_BOUNDS.size.width / 6) {
+            self.isBackShown = NO;
+        }else{
+            self.isBackShown = YES;
+        }
+        
+        [self switchView];
+        
+    }
+    
+}
+
+
+-(void)setBackground:(UIImage *)image
+{
+    UIImageView *backGround = [[UIImageView alloc]initWithImage:image];
+    
+    [self.view insertSubview:backGround aboveSubview:backGround];
+
+}
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+    //UIColor *bgColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"birthday"]];
+    //self.view.backgroundColor = bgColor;
+    
+    [self setBackground:[UIImage imageNamed:@"mainBackground"]];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+-(void)switchView
+{
+    
+    if (self.isBackShown) {
+        
+        
+        //防止多次点击
+        self.backVC.view.userInteractionEnabled = NO;
+        
+        
+        [UIView animateWithDuration:.3
+                              delay:0
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:^{
+                             
+                             CGRect rect = self.backVC.view.frame;
+                             rect.origin.x = backPointX;
+                             rect.origin.y = backPointY;
+                             self.backVC.view.frame = rect;
+                             self.backVC.view.alpha = 0;
+                             
+                             self.NavigationVC.view.transform = CGAffineTransformMakeScale(1, 1);
+                             self.NavigationVC.view.frame = CGRectMake(0, self.NavigationVC.view.frame.origin.y, self.NavigationVC.view.frame.size.width, self.NavigationVC.view.frame.size.height);
+                         } completion:^(BOOL finished) {
+                             self.isBackShown = NO;
+                             [self enableAll];
+                         }];
+        
+        
+    }else{
+        
+        
+        //防止多次点击
+        self.backVC.view.userInteractionEnabled = YES;
+        
+        
+    [UIView animateWithDuration:.3
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         
+                         
+                         CGRect rect = self.backVC.view.frame;
+                         rect.origin.x = 0;
+                         rect.origin.y = 0;
+                         self.backVC.view.frame = rect;
+                         self.backVC.view.alpha = 1;
+                         self.backVC.view.transform = CGAffineTransformMakeScale(1, 1);
+                         
+                         
+                         self.NavigationVC.view.transform = CGAffineTransformMakeScale(0.6, 0.6);
+                         
+                         self.NavigationVC.view.frame = CGRectMake(240, self.NavigationVC.view.frame.origin.y, self.NavigationVC.view.frame.size.width, self.NavigationVC.view.frame.size.height);
+                         
+                     } completion:^(BOOL finished) {
+                         [self disableAll];
+                         self.isBackShown = YES;
+                     }];
+    }
+}
+
+-(void)showBackView
+{
+    [self switchView];
+    
+}
+-(void)changeRightVC:(id)viewController
+{
+    
+    //防止多次点击
+    self.backVC.view.userInteractionEnabled = NO;
+    
+    
+    //先消失 再弹出
+    [UIView animateWithDuration:0.1 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^(){
+        
+        CGRect rect =  self.NavigationVC.view.frame ;
+        
+        rect.origin.x = SCREEN_BOUNDS.size.width;
+        
+        self.NavigationVC.view.frame = rect;
+        
+    } completion:^(BOOL finished){
+        
+        [self.NavigationVC pushViewController:viewController animated:NO];
+        [self switchView];
+    
+    }];
+    
+    
+}
+
+-(void)disableAll
+{
+    [self.NavigationVC.view addSubview:self.topView];
+    
+}
+-(void)enableAll
+{
+    [self.topView removeFromSuperview];
+}
+@end

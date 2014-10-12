@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--   
+    内容：所有接种信息
+ 
+    参考：
+    vaccines.xml
+    此表根据卫生部扩大国家免疫规划疫苗免疫程序制定。具体请咨询当地疾病预防控制中心
+    以下为常规免疫程序，不包括应急接种和强化免疫
+ 
+    note: 
+    接种编码与疫苗编码的关系：
+    
+    接种编码(2 or 3) ＝ 疫苗编码（2） ＋ 类型编码（可选）
+ -->
+<inoculations>
+    <!-- 卡介苗-->
+    <inoculation>
+        <code>01</code>           <!-- 接种编码 -->
+        <count>1</count>                         <!-- 剂次-->
+        <startAge>0</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    
+    <!-- 乙肝疫苗 -->
+    
+    <inoculation>
+        <code>02</code>           <!-- 接种编码-->
+        <count>1</count>                         <!-- 剂次-->
+        <startAge>0</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note>出生24小时内尽快接种</note>        <!-- 其他-->
+    </inoculation>
+    
+    <inoculation>
+        <code>02</code>           <!-- 接种编码-->
+        <count>2</count>                         <!-- 剂次-->
+        <startAge>1</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    
+    <inoculation>
+        <code>02</code>           <!-- 接种编码-->
+        <count>3</count>                         <!-- 剂次-->
+        <startAge>6</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    
+    <!--  脊髓灰质炎疫苗  -->
+    <inoculation>
+        <code>03</code>           <!-- 接种编码-->
+        <count>1</count>                         <!-- 剂次-->
+        <startAge>2</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    
+    <inoculation>
+        <code>03</code>           <!-- 接种编码-->
+        <count>2</count>                         <!-- 剂次-->
+        <startAge>3</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    
+    <inoculation>
+        <code>03</code>           <!-- 接种编码-->
+        <count>3</count>                         <!-- 剂次-->
+        <startAge>4</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    
+    <inoculation>
+        <code>03</code>           <!-- 接种编码-->
+        <count>4</count>                         <!-- 剂次-->
+        <startAge>48</startAge>                   <!-- 最早接种年龄-->
+        <type>1</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    
+    <!-- 百白破 -->
+    <inoculation>
+        <code>04</code>           <!-- 接种编码-->
+        <count>1</count>                         <!-- 剂次-->
+        <startAge>3</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    <inoculation>
+        <code>04</code>           <!-- 接种编码-->
+        <count>2</count>                         <!-- 剂次-->
+        <startAge>4</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    <inoculation>
+        <code>04</code>           <!-- 接种编码-->
+        <count>3</count>                         <!-- 剂次-->
+        <startAge>5</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    <inoculation>
+        <code>04</code>           <!-- 接种编码-->
+        <count>4</count>                         <!-- 剂次-->
+        <startAge>18</startAge>                   <!-- 最早接种年龄-->
+        <type>1</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note>18 - 24</note>                         <!-- 其他-->
+    </inoculation>
+    
+    <!-- 白破 -->
+    <inoculation>
+        <code>06</code>           <!-- 接种编码-->
+        <count>1</count>                         <!-- 剂次-->
+        <startAge>72</startAge>                   <!-- 最早接种年龄-->
+        <type>1</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    
+    <!--  麻疹 -->
+    <inoculation>
+        <code>09</code>           <!-- 接种编码-->
+        <count>1</count>                         <!-- 剂次-->
+        <startAge>8</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    
+    <!-- 麻腮风  -->
+    <inoculation>
+        <code>12</code>           <!-- 接种编码-->
+        <count>1</count>                         <!-- 剂次-->
+        <startAge>18</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note>18 - 24</note>                         <!-- 其他-->
+    </inoculation>
+    
+    <!-- 乙脑减毒-->
+    <inoculation>
+        <code>1801</code>           <!-- 接种编码-->
+        <count>1</count>                         <!-- 剂次-->
+        <startAge>8</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    <inoculation>
+        <code>1801</code>           <!-- 接种编码-->
+        <count>2</count>                         <!-- 剂次-->
+        <startAge>24</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    
+    <!-- 乙脑灭活-->
+    <inoculation>
+        <code>1802</code>           <!-- 接种编码-->
+        <count>1</count>                         <!-- 剂次-->
+        <startAge>8</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note>第一、二剂间隔7-10天</note>                         <!-- 其他-->
+    </inoculation>
+    <inoculation>
+        <code>1802</code>           <!-- 接种编码-->
+        <count>2</count>                         <!-- 剂次-->
+        <startAge>8</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note>第一、二剂间隔7-10天</note>                         <!-- 其他-->
+    </inoculation>
+    <inoculation>
+        <code>1802</code>           <!-- 接种编码-->
+        <count>3</count>                         <!-- 剂次-->
+        <startAge>24</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    <inoculation>
+        <code>1802</code>           <!-- 接种编码-->
+        <count>4</count>                         <!-- 剂次-->
+        <startAge>72</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    
+    <!-- A群流脑疫苗 -->
+    <inoculation>
+        <code>16</code>           <!-- 接种编码-->
+        <count>1</count>                         <!-- 剂次-->
+        <startAge>6</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note>接种间隔3个月</note>                         <!-- 其他-->
+    </inoculation>
+    <inoculation>
+        <code>16</code>           <!-- 接种编码-->
+        <count>2</count>                         <!-- 剂次-->
+        <startAge>9</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note>接种间隔3个月</note>                         <!-- 其他-->
+    </inoculation>
+    
+     <!-- A+C群流脑疫苗  -->
+    <inoculation>
+        <code>17</code>           <!-- 接种编码-->
+        <count>1</count>                         <!-- 剂次-->
+        <startAge>36</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    <inoculation>
+        <code>17</code>           <!-- 接种编码-->
+        <count>2</count>                         <!-- 剂次-->
+        <startAge>72</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    
+    <!-- 甲肝灭活 -->
+    <inoculation>
+        <code>1902</code>           <!-- 接种编码-->
+        <count>1</count>                         <!-- 剂次-->
+        <startAge>18</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+    <inoculation>
+        <code>1902</code>           <!-- 接种编码-->
+        <count>2</count>                         <!-- 剂次-->
+        <startAge>24</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note>24 － 30</note>                         <!-- 其他-->
+    </inoculation>
+    
+    <!-- 甲肝减毒 -->
+    <inoculation>
+        <code>1901</code>           <!-- 接种编码-->
+        <count>1</count>                         <!-- 剂次-->
+        <startAge>18</startAge>                   <!-- 最早接种年龄-->
+        <type>0</type>                           <!-- 免疫类型 0 基础 1 加强 3 应急 4 强化-->
+        <note></note>                         <!-- 其他-->
+    </inoculation>
+        
+</inoculations>

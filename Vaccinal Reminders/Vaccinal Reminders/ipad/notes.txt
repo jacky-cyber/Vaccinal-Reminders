@@ -1,0 +1,10 @@
+/*
+    notes:
+
+    this is an iphone-only app.
+    supports 3.5-inch and 4.0-inch screens.
+    supports ios 7.0.
+    
+    written by liwq
+    
+*/
