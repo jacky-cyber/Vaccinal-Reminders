@@ -95,7 +95,7 @@
     
     if (self.isUpdate) {
         
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"保存修改" message:@"是否保存修改" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"确认", nil];
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"保存修改" message:@"是否保存修改" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
         
         [alert show];
         

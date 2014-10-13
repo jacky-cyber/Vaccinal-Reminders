@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D3E342AD-A182-4E51-B9B1-0B1DD31C5560</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Vaccinal Reminders</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0EE6BE99299D9A13E0B20B01806835979467277A</key>
+		<string>github.com:liwangqiang/Vaccinal-Reminders.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Vaccinal Reminders/Vaccinal Reminders.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0EE6BE99299D9A13E0B20B01806835979467277A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:liwangqiang/Vaccinal-Reminders.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0EE6BE99299D9A13E0B20B01806835979467277A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0EE6BE99299D9A13E0B20B01806835979467277A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Vaccinal-Reminders</string>
+		</dict>
+	</array>
+</dict>
+</plist>
