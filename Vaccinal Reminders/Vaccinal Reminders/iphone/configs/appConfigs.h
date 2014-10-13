@@ -47,8 +47,8 @@ typedef enum {
 #define aboutUs 2
 
 
-#define notificationHour 12
-#define notificationMins 06
+#define notificationHour 10
+#define notificationMins 0
 
 
 

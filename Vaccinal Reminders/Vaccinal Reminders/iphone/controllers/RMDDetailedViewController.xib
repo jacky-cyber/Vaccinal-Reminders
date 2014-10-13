@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RMDDetailedViewController">
@@ -19,12 +20,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tMD-NK-JuU" userLabel="contentView">
-                    <rect key="frame" x="20" y="75" width="280" height="440"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <rect key="frame" x="20" y="75" width="280" height="428"/>
                     <subviews>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="卡介苗" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iP-W9-q46">
                             <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -33,33 +32,29 @@
                             <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </label>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="POe-Ug-74Y">
-                            <rect key="frame" x="0.0" y="49" width="280" height="343"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <rect key="frame" x="0.0" y="49" width="280" height="324"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uLL-Iq-1qQ">
-                            <rect key="frame" x="211" y="400" width="51" height="31"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <connections>
-                                <action selector="switchChange:" destination="-1" eventType="valueChanged" id="6rB-JI-PLU"/>
-                            </connections>
-                        </switch>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wod-56-gFh">
-                            <rect key="frame" x="147" y="405" width="133" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <rect key="frame" x="147" y="381" width="133" height="21"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uLL-Iq-1qQ">
+                            <rect key="frame" x="211" y="387" width="51" height="31"/>
+                            <connections>
+                                <action selector="switchChange:" destination="-1" eventType="valueChanged" id="6rB-JI-PLU"/>
+                            </connections>
+                        </switch>
                     </subviews>
                     <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4M3-Q7-1Oe">
                     <rect key="frame" x="268" y="57" width="50" height="50"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="closeX"/>
                     <connections>
                         <action selector="closeView:" destination="-1" eventType="touchUpInside" id="Z8N-NE-Dx5"/>
@@ -70,13 +65,18 @@
             <constraints>
                 <constraint firstItem="tMD-NK-JuU" firstAttribute="top" secondItem="ZMt-SW-iIj" secondAttribute="top" constant="75" id="26N-Wd-3jp"/>
                 <constraint firstItem="tMD-NK-JuU" firstAttribute="leading" secondItem="ZMt-SW-iIj" secondAttribute="leading" constant="20" id="4zw-qa-t3v"/>
-                <constraint firstAttribute="bottom" secondItem="tMD-NK-JuU" secondAttribute="bottom" constant="53" id="Dy2-Rw-ax2"/>
+                <constraint firstAttribute="bottom" secondItem="tMD-NK-JuU" secondAttribute="bottom" constant="65" id="cDS-Rm-lNq"/>
                 <constraint firstAttribute="trailing" secondItem="tMD-NK-JuU" secondAttribute="trailing" constant="20" id="e7A-W5-ogM"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <nil key="simulatedStatusBarMetrics"/>
         </view>
     </objects>
     <resources>
         <image name="closeX" width="26" height="26"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
