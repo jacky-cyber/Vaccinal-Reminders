@@ -93,10 +93,9 @@ const char *RMDRootViewControllerKey = "RMDRootViewControllerKey";
         
         
         //添加滑动显示backView支持
-        
         UISwipeGestureRecognizer *showBackViewGr = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(switchView)];
         
-        showBackViewGr.direction = UISwipeGestureRecognizerDirectionLeft;
+        showBackViewGr.direction = UISwipeGestureRecognizerDirectionRight;
         
         [self.mainVC.view addGestureRecognizer:showBackViewGr];
         
@@ -105,7 +104,6 @@ const char *RMDRootViewControllerKey = "RMDRootViewControllerKey";
     return self;
 
 }
-
 
 
 
