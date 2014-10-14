@@ -615,6 +615,7 @@
 				INFOPLIST_FILE = "Vaccinal Reminders/Vaccinal Reminders-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -629,6 +630,7 @@
 				INFOPLIST_FILE = "Vaccinal Reminders/Vaccinal Reminders-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

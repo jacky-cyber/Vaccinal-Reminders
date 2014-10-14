@@ -256,9 +256,6 @@
     //判断点击的位置 进行相应处理
     if (self.touchPoint.x > 60) {
         
-        //阻止一瞬间的多次选定，动画完成时再重新可enable
-        tableView.userInteractionEnabled = NO;
-        
         RMDInoculation *inoc = self.schedule.schedule[indexPath.row];
         
         [self showDetailForInoc:inoc];
@@ -273,6 +270,12 @@
 
 -(void)showDetailForInoc:(RMDInoculation *)inoc
 {
+    
+    
+    //阻止一瞬间的多次选定，动画完成时再重新可enable
+    self.view.userInteractionEnabled = NO;
+    
+    
     RMDDetailedViewController *detailViewController = [[RMDDetailedViewController alloc] initWithInoc:inoc];
     
     [self.rootVC addChildViewController:detailViewController];
@@ -305,7 +308,8 @@
         
         
         //将其变为可用
-        self.tableView.userInteractionEnabled = YES;
+        
+        self.view.userInteractionEnabled = YES;
     }];
 }
 

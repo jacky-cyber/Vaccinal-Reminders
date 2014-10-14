@@ -18,7 +18,7 @@
             <subviews>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6v1-ey-Jpp">
                     <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <attributedString key="attributedText">
                         <fragment content="  ">
                             <attributes>
@@ -85,7 +85,7 @@ CgogICAgIA
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstItem="6v1-ey-Jpp" firstAttribute="top" secondItem="1" secondAttribute="top" constant="64" id="9ja-ey-yVT"/>
                 <constraint firstItem="6v1-ey-Jpp" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Uwa-T5-5kV"/>

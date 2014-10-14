@@ -75,20 +75,30 @@ const char *RMDRootViewControllerKey = "RMDRootViewControllerKey";
         [self.view addSubview:self.NavigationVC.view];
         
         self.topView = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+        
+        //支持点击隐藏backView
         UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(switchView)];
+        //支持轻扫隐藏backView
+        UISwipeGestureRecognizer *swipeGr = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(switchView)];
+        swipeGr.direction = UISwipeGestureRecognizerDirectionLeft;
+        
+        self.topView.backgroundColor = [UIColor whiteColor];
+        self.topView.alpha = 0.1;
         
         [self.topView addGestureRecognizer:singleTap];
+        [self.topView addGestureRecognizer:swipeGr];
         
         self.isBackShown = NO;
         
         
         
-        //添加边界滑动支持
-        UIScreenEdgePanGestureRecognizer *screenEPGR = [[UIScreenEdgePanGestureRecognizer alloc]initWithTarget:self action:@selector(slipView:)];
+        //添加滑动显示backView支持
         
-        screenEPGR.edges = UIRectEdgeLeft;
+        UISwipeGestureRecognizer *showBackViewGr = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(switchView)];
         
-        [self.mainVC.view addGestureRecognizer:screenEPGR];
+        showBackViewGr.direction = UISwipeGestureRecognizerDirectionLeft;
+        
+        [self.mainVC.view addGestureRecognizer:showBackViewGr];
         
         
     }
@@ -97,22 +107,6 @@ const char *RMDRootViewControllerKey = "RMDRootViewControllerKey";
 }
 
 
--(void)slipView:(UIScreenEdgePanGestureRecognizer *)screenEPGR
-{
-    CGPoint thisPoint = [screenEPGR locationInView:self.view.window];
-    if (screenEPGR.state == UIGestureRecognizerStateChanged) {
-        
-        if (thisPoint.x > SCREEN_BOUNDS.size.width / 6) {
-            self.isBackShown = NO;
-        }else{
-            self.isBackShown = YES;
-        }
-        
-        [self switchView];
-        
-    }
-    
-}
 
 
 -(void)setBackground:(UIImage *)image
@@ -161,6 +155,8 @@ const char *RMDRootViewControllerKey = "RMDRootViewControllerKey";
                              
                              self.NavigationVC.view.transform = CGAffineTransformMakeScale(1, 1);
                              self.NavigationVC.view.frame = CGRectMake(0, self.NavigationVC.view.frame.origin.y, self.NavigationVC.view.frame.size.width, self.NavigationVC.view.frame.size.height);
+                             
+                             self.topView.alpha = 0;
                          } completion:^(BOOL finished) {
                              self.isBackShown = NO;
                              [self enableAll];
@@ -173,11 +169,13 @@ const char *RMDRootViewControllerKey = "RMDRootViewControllerKey";
         //防止多次点击
         self.backVC.view.userInteractionEnabled = YES;
         
+        [self disableAll];
         
     [UIView animateWithDuration:.3
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
+                         
                          
                          
                          CGRect rect = self.backVC.view.frame;
@@ -192,8 +190,11 @@ const char *RMDRootViewControllerKey = "RMDRootViewControllerKey";
                          
                          self.NavigationVC.view.frame = CGRectMake(240, self.NavigationVC.view.frame.origin.y, self.NavigationVC.view.frame.size.width, self.NavigationVC.view.frame.size.height);
                          
+                         
+                         
+                         self.topView.alpha = 0.1;
+                         
                      } completion:^(BOOL finished) {
-                         [self disableAll];
                          self.isBackShown = YES;
                      }];
     }
