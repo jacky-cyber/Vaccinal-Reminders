@@ -62,18 +62,25 @@ const char *RMDRootViewControllerKey = "RMDRootViewControllerKey";
         self.backVC.rootVC = self;
         self.mainVC.rootVC = self;
         
-        CGRect rect = self.backVC.view.frame;
+        //解决不同尺寸屏幕下的显示问题
+        CGRect rect = self.view.bounds;
+        self.mainVC.view.frame = rect;
+        self.backVC.view.frame = rect;
+        
+        
+        
         rect.origin.x = backPointX;
         rect.origin.y = backPointY;
         self.backVC.view.frame = rect;
         self.backVC.view.alpha = 0;
-        
         [self.view addSubview:self.backVC.view];
         
-        self.NavigationVC = [[RMDTranspBarNavigationController alloc]initWithRootViewController:mainVC];
         
+        self.NavigationVC = [[RMDTranspBarNavigationController alloc]initWithRootViewController:mainVC];
         [self.view addSubview:self.NavigationVC.view];
         
+        
+        //遮盖层
         self.topView = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
         
         //支持点击隐藏backView
@@ -111,7 +118,7 @@ const char *RMDRootViewControllerKey = "RMDRootViewControllerKey";
 {
     UIImageView *backGround = [[UIImageView alloc]initWithImage:image];
     
-    [self.view insertSubview:backGround aboveSubview:backGround];
+    [self.view insertSubview:backGround atIndex:0];
 
 }
 - (void)viewDidLoad

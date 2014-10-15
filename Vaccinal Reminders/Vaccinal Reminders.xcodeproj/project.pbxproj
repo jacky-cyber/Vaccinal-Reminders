@@ -24,7 +24,6 @@
 		6E1833B119D49CAA004258A3 /* RMDSetBirthdayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1833AF19D49CAA004258A3 /* RMDSetBirthdayViewController.xib */; };
 		6E1833B519D49E36004258A3 /* RMDAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1833B319D49E36004258A3 /* RMDAboutUsViewController.m */; };
 		6E1833B619D49E36004258A3 /* RMDAboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1833B419D49E36004258A3 /* RMDAboutUsViewController.xib */; };
-		6E1833B819D4E898004258A3 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 6E1833B719D4E898004258A3 /* File */; };
 		6E4ECEF819C8FFA60040A115 /* RMDVaccinalSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4ECEF719C8FFA60040A115 /* RMDVaccinalSchedule.m */; };
 		6E4ECEFD19CB63200040A115 /* RMDReminderCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4ECEFC19CB63200040A115 /* RMDReminderCenter.m */; };
 		6EA2E613199D142F00062F32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA2E612199D142F00062F32 /* Foundation.framework */; };
@@ -91,7 +90,6 @@
 		6E1833B219D49E36004258A3 /* RMDAboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDAboutUsViewController.h; sourceTree = "<group>"; };
 		6E1833B319D49E36004258A3 /* RMDAboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDAboutUsViewController.m; sourceTree = "<group>"; };
 		6E1833B419D49E36004258A3 /* RMDAboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RMDAboutUsViewController.xib; path = ../controllers/RMDAboutUsViewController.xib; sourceTree = "<group>"; };
-		6E1833B719D4E898004258A3 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		6E4ECEF619C8FFA60040A115 /* RMDVaccinalSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMDVaccinalSchedule.h; path = ../models/RMDVaccinalSchedule.h; sourceTree = "<group>"; };
 		6E4ECEF719C8FFA60040A115 /* RMDVaccinalSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMDVaccinalSchedule.m; path = ../models/RMDVaccinalSchedule.m; sourceTree = "<group>"; };
 		6E4ECEFB19CB63200040A115 /* RMDReminderCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDReminderCenter.h; sourceTree = "<group>"; };
@@ -277,7 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				6EC79A1319A2756E00933FF6 /* appConfigs.h */,
-				6E1833B719D4E898004258A3 /* File */,
 			);
 			path = configs;
 			sourceTree = "<group>";
@@ -443,7 +440,6 @@
 			files = (
 				6E1833B119D49CAA004258A3 /* RMDSetBirthdayViewController.xib in Resources */,
 				6E1833B619D49E36004258A3 /* RMDAboutUsViewController.xib in Resources */,
-				6E1833B819D4E898004258A3 /* File in Resources */,
 				6EA2E64D199D171900062F32 /* notes.txt in Resources */,
 				6EA2E660199EBAA000062F32 /* inoculations.xml in Resources */,
 				6EA2E61D199D142F00062F32 /* InfoPlist.strings in Resources */,

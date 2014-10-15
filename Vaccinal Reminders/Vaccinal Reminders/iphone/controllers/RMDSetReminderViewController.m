@@ -24,7 +24,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-        self.list = @[@"当天",@"当天,一周前",@"当天,一周前,半月前",@"None"];
+        self.list = @[@"当天",@"当天,一周前",@"当天,一周前,半月前",@"无"];
         
         self.currentSetting = [[NSUserDefaults standardUserDefaults]integerForKey:REMINDER_SETTING];
         

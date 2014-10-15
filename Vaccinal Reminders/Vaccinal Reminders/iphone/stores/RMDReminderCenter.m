@@ -256,6 +256,7 @@
     
     [formatter setDateFormat:@"YYYY年 MM月 dd日 HH "];
     
+    
     NSLog(@"birthday:%@",[formatter stringFromDate:[[RMDVaccinalSchedule sharedSchedule]birthday] ]);
     
     for (UILocalNotification *notice in array) {

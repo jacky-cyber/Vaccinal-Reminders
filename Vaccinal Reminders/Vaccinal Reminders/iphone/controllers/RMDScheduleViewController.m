@@ -102,7 +102,7 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [[RMDReminderCenter sharedCenter]printAllLocalNotification];
+        [RMDReminderCenter sharedCenter];
     });
 }
 
@@ -116,8 +116,6 @@
 -(void)handleSingleTap:(UITapGestureRecognizer *)tapGR
 {
     self.touchPoint = [tapGR locationInView:self.view];
-    
-    NSLog(@"one tap");
 }
 
 -(void)setting
